@@ -42,7 +42,7 @@ func main() {
     password_array := strings.Join(matches, ", ")
     password := strings.Trim(password_array, "password: ") //password
 
-    fmt.Println("Sending token to clipboard...")
+    fmt.Println("Sending token to your clipboard...")
     clipboard.WriteAll(password) //clipboard
 
     fmt.Println("Opening your browser... \nPress Ctrl + C to finish!! :P")
@@ -57,10 +57,8 @@ func main() {
         fmt.Printf("%s", err)
     }
 
-    output = string(out[:])
-    output = strings.TrimSpace(output) //context
-
 }
+
 
 func openbrowser(url string) {
 	var err error
